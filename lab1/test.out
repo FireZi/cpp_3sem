@@ -1,0 +1,115 @@
+Initialize is running...
+file "test.txt" opened
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: [COMMON]
+Section COMMON found
+
+Formatted line: StatisterTimeMs=5000
+Parameter added.
+name: StatisterTimeMs
+value: 5000
+
+Formatted line: LogNCMD=1
+Parameter added.
+name: LogNCMD
+value: 1
+
+Formatted line: LogXML=0
+Parameter added.
+name: LogXML
+value: 0
+
+Formatted line: 
+
+Formatted line: DiskCachePath=/sata/panorama
+Parameter added.
+name: DiskCachePath
+value: /sata/panorama
+
+Formatted line: OpenMPThreadsCount=2
+Parameter added.
+name: OpenMPThreadsCount
+value: 2
+
+Formatted line: 
+
+Formatted line: [ADC_DEV]
+Section ADC_DEV found
+
+Formatted line: BufferLenSeconds=0.65
+Parameter added.
+name: BufferLenSeconds
+value: 0.65
+
+Formatted line: SampleRate=120000000.0
+Parameter added.
+name: SampleRate
+value: 120000000.0
+
+Formatted line: Driver=libusb
+Parameter added.
+name: Driver
+value: libusb
+
+Formatted line: 
+
+Formatted line: [NCMD]
+Section NCMD found
+
+Formatted line: EnableChannelControl=1
+Parameter added.
+name: EnableChannelControl
+value: 1
+
+Formatted line: SampleRate=900000.0
+Parameter added.
+name: SampleRate
+value: 900000.0
+
+Formatted line: TidPacketVersionForTidControlCommand=2
+Parameter added.
+name: TidPacketVersionForTidControlCommand
+value: 2
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: 
+
+Formatted line: [LEGACY_XML]
+Section LEGACY_XML found
+
+Formatted line: ListenTcpPort=1976
+Parameter added.
+name: ListenTcpPort
+value: 1976
+
+Formatted line: 
+
+Formatted line: [DEBUG]
+Section DEBUG found
+
+Formatted line: PlentySockMaxQSize=126
+Parameter added.
+name: PlentySockMaxQSize
+value: 126
+
+Formatted line: DBAddressIP=127.0.0.1
+Parameter added.
+name: DBAddressIP
+value: 127.0.0.1
+
+Initialize finished
+
+
