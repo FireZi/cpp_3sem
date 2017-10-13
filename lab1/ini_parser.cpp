@@ -7,7 +7,7 @@
 
 
 Ini_parser::~Ini_parser() {
-	for (auto &sec : map) {
+	for (auto &sec : data) {
 		delete 	sec.second;
 	}
 }
@@ -30,7 +30,7 @@ void Ini_parser::initialize(std::string const &filename_cstr) {
 		if (line[0] == '[' && line[line.size() - 1] == ']') {
 			cur_section = line.substr(1, line.size() - 2);
 			std::cout << "Section " << cur_section << " found\n";
-			map[cur_section] = new Section();
+			data[cur_section] = new Section();
 			continue;
 		} 
 		
@@ -47,7 +47,7 @@ void Ini_parser::initialize(std::string const &filename_cstr) {
 				param_value += line[i];
 				i++;
 			}
-			map[cur_section]->push(param_name, param_value);
+			data[cur_section]->push(param_name, param_value);
 			continue;
 		}
 		std::cerr << "\nError: Ini line format error in: \n";
@@ -57,12 +57,12 @@ void Ini_parser::initialize(std::string const &filename_cstr) {
 }
 
 bool Ini_parser::is_have_section(std::string const &section_name) const {
-	return map.find(section_name) != map.end();
+	return data.find(section_name) != data.end();
 }
 
 bool Ini_parser::is_have_param(std::string const &section_name, std::string const &param_name) const {
 	if (is_have_section(section_name)) {
-		return map.at(section_name)->is_exists_param(param_name);
+		return data.at(section_name)->is_exists_param(param_name);
 	}
 	std::cout << section_name << " Section not found\n";
 	return false;

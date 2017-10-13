@@ -23,28 +23,28 @@ struct Ini_parser {
 	T get_value(std::string const &section_name, std::string const &param_name) const {
 		std::stringstream ss;
 		T result;
-		ss << map.at(section_name)->get(param_name);
-		ss >> result;
+		ss << data.at(section_name)->get(param_name);
+		ss >> result;	
 		return result;
 	}
 
 private:
 	struct Section {
-		std::map <std::string, std::string> map;
+		std::map <std::string, std::string> data;
 
 		void push(std::string const &param_name, std::string const &param_value) {
-			map[param_name] = param_value;
+			data[param_name] = param_value;
 			std::cout << "Parameter added.\n";
 			std::cout << "name: " << param_name << "\n";
 			std::cout << "value: " << param_value << "\n";
 		}
 
 		bool is_exists_param(std::string const &param_name) const {
-			return map.find(param_name) != map.end();
+			return data.find(param_name) !=data.end();
 		}
 
 		std::string get(std::string const &param_name) const {
-			return map.at(param_name);
+			return data.at(param_name);
 		}
 	};
 
@@ -53,5 +53,5 @@ private:
 	bool is_correct_ini_param(std::string const &line) const;
 
 	std::ifstream in;
-	std::map <std::string, Section*> map;
+	std::map <std::string, Section*> data;
 };
