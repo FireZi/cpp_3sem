@@ -4,6 +4,9 @@
 #include "Factorization.h"
 
 
+std::vector<int> Factorization::mprime;
+std::vector<int> Factorization::primes;
+
 Factorization::Factorization() {
 	mprime.resize(size_);
 	for (int i = 2; i < (int)size_; i++) {
@@ -55,7 +58,6 @@ void Factorization::file_factorize(char const * const file_in, char const * cons
     }
     uint64_t n;
     while (in >> n) {
-    	std::cout << n << "\n";
     	std::vector<uint64_t> res = get_factorization(n);
     	out << n << " factorization is: ";
     	for (size_t i = 0; i < res.size(); i++) {

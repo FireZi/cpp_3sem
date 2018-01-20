@@ -12,6 +12,6 @@ struct Factorization {
 
 private:
 	static std::size_t const size_ = (int)1e7;
-	std::vector<int> mprime;
-	std::vector<int> primes;
+	static std::vector<int> mprime;
+	static std::vector<int> primes;
 };
